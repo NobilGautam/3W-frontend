@@ -26,8 +26,7 @@ function UserForm() {
     Array.from(formData.images).forEach(file => data.append('images', file));
 
     try {
-      console.log(import.meta.env.VITE_USER_URL);
-      await axios.post(import.meta.env.VITE_USER_URL, data, {
+      await axios.post('https://threew-backend-3h5f.onrender.com/api/users', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

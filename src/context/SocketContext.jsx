@@ -1,7 +1,7 @@
 import { io } from "socket.io-client"
 import { createContext } from "react"
 
-const devURL = import.meta.env.VITE_PROD_API;
+const devURL = "https://threew-backend-3h5f.onrender.com";
 
 const socket = io(devURL),
     SocketContext = createContext(socket);

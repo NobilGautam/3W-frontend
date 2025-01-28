@@ -14,7 +14,7 @@ function AdminDashboard() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get(import.meta.env.VITE_USER_URL);
+      const response = await axios.get('https://threew-backend-3h5f.onrender.com/api/users');
       setUsers(response.data);
     } catch (error) {
       console.error('Failed to fetch users:', error);
