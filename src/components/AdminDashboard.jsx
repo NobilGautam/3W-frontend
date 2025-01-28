@@ -14,7 +14,7 @@ function AdminDashboard() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/users');
+      const response = await axios.get(import.meta.env.VITE_USER_URL);
       setUsers(response.data);
     } catch (error) {
       console.error('Failed to fetch users:', error);

@@ -26,7 +26,7 @@ function UserForm() {
     Array.from(formData.images).forEach(file => data.append('images', file));
 
     try {
-      await axios.post('http://localhost:5000/api/users', data, {
+      await axios.post(import.meta.env.VITE_USER_URL, data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
